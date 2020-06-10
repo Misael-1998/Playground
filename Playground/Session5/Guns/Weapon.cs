@@ -6,7 +6,7 @@ namespace Playground.Session5.Guns
     {
         public string Name { get; set; }
 
-        public void MakeDamage()
+        public virtual void MakeDamage()
         {
             Console.WriteLine("daño");
         }
