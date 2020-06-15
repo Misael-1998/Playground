@@ -1,10 +1,11 @@
 ﻿
+using System;
+
 namespace Playground.sesion3
 {
     class Uzi
     {
-        public int Rounds { get; } = 2;
-        public int Shots { get; } = 75;
+        public Cartige? Rounds { get; set; }
         public string Name { get; } = "";
 
         public Uzi(string name)
@@ -14,10 +15,12 @@ namespace Playground.sesion3
 
         public bool Shoot()
         {
-            return true;
+            throw new NotImplementedException();
         }
 
-        public void Reaload(Cartige ammo) {
+        public void Reaload(Cartige ammo)
+        {
+            Rounds = ammo;
         }
     }
 }
