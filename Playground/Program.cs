@@ -1,5 +1,4 @@
-﻿using Playground.Session5;
-using Playground.Session5.Guns;
+﻿using Playground.Sesion2;
 
 namespace Playground
 {
@@ -7,6 +6,14 @@ namespace Playground
     {
         static void Main(string[] args)
         {
+            // Sesion 1
+            // new HolaMundo().MostrarHolaMundo();
+
+
+            // Sesion 2
+            new Calculadora().Calcular();
+
+            /*
             Layla layla = new Layla();
             layla.CurrentWeapon?.MakeDamage();
             layla.Walk("san miguel");
@@ -21,6 +28,7 @@ namespace Playground
             layla.CurrentWeapon = new Metralleta();
             layla.CurrentWeapon?.MakeDamage();
             layla.CurrentWeapon = null;
+            */
         }
     }
 }

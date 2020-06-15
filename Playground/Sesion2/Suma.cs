@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 
 namespace Sesion2.Modelos
@@ -9,69 +6,59 @@ namespace Sesion2.Modelos
 
     class Suma
     {
-        public int add(int x, int y)
+        public int Add(int x, int y)
         {
             return x + y;
         }
 
-        public decimal add(decimal x, decimal y)
+        public decimal Add(decimal x, decimal y)
         {
             return x + y;
         }
 
-        public float add(float x, floa y)
-        { 
-        return x + y;
-        }
-
-        
-        public void operacion(int tipoDato)
+        public float Add(float x, float y)
         {
-            string caracter1;
-            string caracter2;
+            return x + y;
+        }
 
-            Console.WriteLine("Ingrese le valor 1");
-            caracter1 = Console.ReadLine();
-            Console.WriteLine("Ingrese le valor 2");
-            caracter2 = Console.ReadLine();
-            Console.WriteLine("tipo de dato seleccionado" + tipoDato);
-            try
+        public bool TryAdd(string numberA, string numberB, out decimal result)
+        {
+            bool n1 = decimal.TryParse(numberA, out decimal x);
+            bool n2 = decimal.TryParse(numberB, out decimal y);
+
+            if (n1 && n2)
             {
-                switch (tipoDato)
-                {
-                    case 1:
-                        int caract1 = Convert.ToInt32(caracter1);
-                        int caract2 = Convert.ToInt32(caracter2);
-                        Console.WriteLine("Su resultado es" + add(caract1, caract2));
-                        break;
-
-                    case 2:
-                        decimal operacion = Convert.ToDecimal(caracter1);
-                        decimal operacion2 = Convert.ToDecimal(caracter2);
-                        Console.WriteLine("Su resultado es" + add(operacion,operacion));
-                        break;
-                    case 3:
-                        
-                        s entero = Convert.ToString(caracter1);
-                        string entero2 = Convert.ToString(caracter2);
-                        Console.WriteLine("Su resultado es" + add(entero, entero2));
-                        break;
-                    default:
-                        break;
-                }
+                result = x + y;
+                return true;
             }
-            catch (Exception)
+            else
             {
-
-                Console.WriteLine("Ingrese los valores segun el tipo de dato seleccionado");
-
+                result = 0;
+                return false;
             }
         }
 
-       
-
-       
+        /*
+        public int Add(int[] numbers) {
+            int acumulado = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                acumulado += numbers[i];
+            }
+            return acumulado;
         }
-            
+        */
+
+        public int Add(params int[] number)
+        {
+            int acumulado = 0;
+            for (int i = 0; i < number.Length; i++)
+            {
+                acumulado += number[i];
+            }
+            return acumulado;
+        }
     }
+
+}
 
