@@ -1,4 +1,5 @@
 ﻿using Playground.Sesion2;
+using Playground.sesion3;
 
 namespace Playground
 {
@@ -13,6 +14,8 @@ namespace Playground
             // Sesion 2
             //new Calculadora().Calcular();
 
+            //Sesion 3
+            new ShotGallery().EmptyAmmo();
             /*
             Layla layla = new Layla();
             layla.CurrentWeapon?.MakeDamage();

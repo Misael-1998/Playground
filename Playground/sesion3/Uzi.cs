@@ -15,7 +15,25 @@ namespace Playground.sesion3
 
         public bool Shoot()
         {
-            throw new NotImplementedException();
+            if (Rounds == null)
+            {
+                Console.WriteLine("click");
+                return false;
+            }
+
+            if (Rounds.HasNext())
+            {
+
+                int numeroBala = Rounds.GetBullet();
+                Console.WriteLine($"{Name}--piu{numeroBala}");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("click");
+                return false;
+            }
+
         }
 
         public void Reaload(Cartige ammo)
