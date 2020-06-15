@@ -9,10 +9,14 @@
 *.user
 *.userosscache
 *.sln.docstates
-.vs\
+.vs/
+*.suo
 # Mis archivos
 BancoShell/Doc
 .idea
+
+# compiler object code
+obj/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
