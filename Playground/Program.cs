@@ -11,7 +11,7 @@ namespace Playground
 
 
             // Sesion 2
-            new Calculadora().Calcular();
+            //new Calculadora().Calcular();
 
             /*
             Layla layla = new Layla();

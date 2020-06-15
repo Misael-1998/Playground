@@ -6,7 +6,8 @@ namespace Sesion3.Modelo
 {
     class Arma
     {
-    public void disparar()
+
+    public void Disparar()
     {
             int opcion;
             Console.WriteLine("Toma un arma");
