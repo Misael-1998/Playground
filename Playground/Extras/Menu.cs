@@ -5,7 +5,7 @@ namespace Playground.Extras
     public class Menu
     {
         public string Name { get; set; } = "Menu";
-        private string[] Options { get; } = {"salir"};
+        private string[] Options { get; } = { "salir" };
         public int NumberOfOptions
         {
             get => Options.Length;
@@ -13,7 +13,7 @@ namespace Playground.Extras
 
         public Menu(int optionsNumber)
         {
-            if(optionsNumber < 1) return;
+            if (optionsNumber < 1) return;
             Options = new string[optionsNumber];
         }
 
@@ -27,14 +27,14 @@ namespace Playground.Extras
         public void ShowMenu()
         {
             Console.WriteLine(Name);
-            Console.WriteLine(Options);
             for (int i = 0; i < Options.Length; i++)
             {
-                
+                Console.WriteLine(Options[i]);
             }
-            
+
         }
-        
+
+
 
     }
 }
