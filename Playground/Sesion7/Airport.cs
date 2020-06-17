@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Playground.Sesion7
 {
     class Airport
@@ -8,10 +10,23 @@ namespace Playground.Sesion7
 
             Airplane plane = new Airplane();
             Duck duck = new Duck();
+            Misil misil = new Misil();
             IFlyable[] flyables = new IFlyable[3];
             flyables[0] = duck;
             flyables[1] = plane;
-            flyables[2] = plane;
+            flyables[2] = misil;
+
+            foreach (IFlyable volador in flyables)
+            {
+
+                volador.Fly();
+               
+
+            }
+            foreach (IFlyable aterrizar in flyables)
+            {
+                aterrizar.Land();
+            }
         }
     }
 }
