@@ -1,5 +1,6 @@
 ﻿
 using System;
+using Playground.Sesion7.Fabrica;
 
 namespace Playground.Sesion7
 {
@@ -27,6 +28,14 @@ namespace Playground.Sesion7
             {
                 aterrizar.Land();
             }
+            CorrerCarros();
+        }
+
+        private void CorrerCarros()
+        {
+            Ensamblador e = new Ensamblador();
+            e.EnsamblarCarro(Modelos.Lanser).Avanazar();
+            e.EnsamblarCarro(Modelos.N350Z).Avanazar();
         }
     }
 }
