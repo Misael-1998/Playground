@@ -1,5 +1,6 @@
 ﻿using Playground.Sesion2;
 using Playground.sesion3;
+using Playground.Sesion7;
 
 namespace Playground
 {
@@ -15,7 +16,7 @@ namespace Playground
             //new Calculadora().Calcular();
 
             //Sesion 3
-            new ShotGallery().EmptyAmmo();
+            // new ShotGallery().EmptyAmmo();
             /*
             Layla layla = new Layla();
             layla.CurrentWeapon?.MakeDamage();
@@ -32,6 +33,9 @@ namespace Playground
             layla.CurrentWeapon?.MakeDamage();
             layla.CurrentWeapon = null;
             */
+
+            // Sesion 6
+            new Airport().TakeOffPlane();
         }
     }
 }
