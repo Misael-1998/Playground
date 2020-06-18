@@ -11,6 +11,8 @@ namespace Playground.Sesion7.Fabrica
         N350Z
     }
 
+
+
     class Ensamblador
     {
 
@@ -56,12 +58,24 @@ namespace Playground.Sesion7.Fabrica
             };
         }
 
-        private IFrenos HacerFrenos(int tipo)
+        private IFrenos[] HacerFrenos(int tipo)
         {
             return tipo switch
             {
-                0 => new Boschcs(),
-                1 => new Brembo()
+                0 => new IFrenos[]
+                { 
+                  new Boschcs(),
+                  new Boschcs(),
+                  new Boschcs(),
+                  new Boschcs()
+                },
+                1 => new IFrenos[]
+                { 
+                new Brembo(),
+                new Brembo(),
+                new Brembo(),
+                new Brembo()
+                }
             };
         }
 

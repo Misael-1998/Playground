@@ -40,7 +40,8 @@ namespace Playground
             // Sesion 6
             // new Airport().TakeOffPlane();
             // Sesion7
-            new Ensamblador().EnsamblarCarro();
+            new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
+            
         }
     }
 }
