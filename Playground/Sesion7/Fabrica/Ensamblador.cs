@@ -56,6 +56,15 @@ namespace Playground.Sesion7.Fabrica
             };
         }
 
+        private IFrenos HacerFrenos(int tipo)
+        {
+            return tipo switch
+            {
+                0 => new Boschcs(),
+                1 => new Brembo()
+            };
+        }
+
       
 
         public Carro EnsamblarCarro(Modelos modelo)
@@ -66,11 +75,15 @@ namespace Playground.Sesion7.Fabrica
                     Lancer lancer = new Lancer();
                     lancer.AgregarLlantas(HacerLlantas(0));
                     lancer.AgregarMotor(HacerMotor(1));
+                    lancer.AgregarFrenos(HacerFrenos(0));
+                    
                     return lancer;
                 case Modelos.N350Z:
                     N350Z nissan = new N350Z();
                     nissan.AgregarLlantas(HacerLlantas(1));
                     nissan.AgregarMotor(HacerMotor(1));
+                    nissan.AgregarFrenos(HacerFrenos(1));
+                    
                     return nissan;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(modelo), modelo, null);

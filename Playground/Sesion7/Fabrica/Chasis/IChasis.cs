@@ -10,6 +10,6 @@ namespace Playground.Sesion7.Fabrica.Chasis
 
         public void AgregarMotor(IMotor motor);
 
-     
+        public void AgregarFrenos(IFrenos frenos);
     }
 }
