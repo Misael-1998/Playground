@@ -1,7 +1,9 @@
 ﻿using System;
+using Playground.Sesion7.Fabrica.Carroseria;
 using Playground.Sesion7.Fabrica.Frenos;
 using Playground.Sesion7.Fabrica.Llantas;
 using Playground.Sesion7.Fabrica.Motores;
+using Playground.Sesion7.Fabrica.Suspension;
 
 namespace Playground.Sesion7.Fabrica
 {
@@ -58,6 +60,15 @@ namespace Playground.Sesion7.Fabrica
             };
         }
 
+        private ICarroceria HacerCarroceria(int tipo)
+        {
+            return tipo switch
+            {
+                0 => new Hatchback(),
+                1=> new Fastback()
+            };
+        }
+
         private IFrenos[] HacerFrenos(int tipo)
         {
             return tipo switch
@@ -79,6 +90,30 @@ namespace Playground.Sesion7.Fabrica
             };
         }
 
+        private ISuspension[] HacerSuspension(int tipo)
+        {
+            return tipo switch
+            {
+                0 => new ISuspension[]
+                { 
+                new Boge(),
+                new Boge(),
+                new Boge(),
+                new Boge()
+                },
+
+                1 => new ISuspension[]
+                {
+                new Monroe(),
+                new Monroe(),
+                new Monroe(),
+                new Monroe()
+
+                }
+
+            };
+        }
+
       
 
         public Carro EnsamblarCarro(Modelos modelo)
@@ -90,14 +125,16 @@ namespace Playground.Sesion7.Fabrica
                     lancer.AgregarLlantas(HacerLlantas(0));
                     lancer.AgregarMotor(HacerMotor(1));
                     lancer.AgregarFrenos(HacerFrenos(0));
-                    
+                    lancer.AgregarSuspension(HacerSuspension(0));
+                    lancer.AgregarCarroceria(HacerCarroceria(0));
                     return lancer;
                 case Modelos.N350Z:
                     N350Z nissan = new N350Z();
                     nissan.AgregarLlantas(HacerLlantas(1));
                     nissan.AgregarMotor(HacerMotor(1));
                     nissan.AgregarFrenos(HacerFrenos(1));
-                    
+                    nissan.AgregarSuspension(HacerSuspension(1));
+                    nissan.AgregarCarroceria(HacerCarroceria(1));
                     return nissan;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(modelo), modelo, null);

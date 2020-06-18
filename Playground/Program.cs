@@ -42,10 +42,10 @@ namespace Playground
             // new Airport().TakeOffPlane();
             
             // Sesion7
-            // new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
+             new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
             
             // Sesion 8
-            Zoo.AlimentarAnimales();
+            //Zoo.AlimentarAnimales();
             
         }
     }

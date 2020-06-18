@@ -1,6 +1,8 @@
-﻿using Playground.Sesion7.Fabrica.Frenos;
+﻿using Playground.Sesion7.Fabrica.Carroseria;
+using Playground.Sesion7.Fabrica.Frenos;
 using Playground.Sesion7.Fabrica.Llantas;
 using Playground.Sesion7.Fabrica.Motores;
+using Playground.Sesion7.Fabrica.Suspension;
 
 namespace Playground.Sesion7.Fabrica.Chasis
 {
@@ -11,5 +13,9 @@ namespace Playground.Sesion7.Fabrica.Chasis
         public void AgregarMotor(IMotor motor);
 
         public void AgregarFrenos(IFrenos[] frenos);
+
+        public void AgregarSuspension(ISuspension[] suspension);
+
+        public void AgregarCarroceria(ICarroceria carroceria);
     }
 }
