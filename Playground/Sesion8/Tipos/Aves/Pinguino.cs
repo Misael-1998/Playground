@@ -3,16 +3,17 @@ using Playground.Sesion8.Habilidades;
 
 namespace Playground.Sesion8.Tipos.Aves
 {
-    public class Pinguino: Ave, ICaminador, INadador
+    public class Pinguino : Ave, ICaminador, INadador
     {
+        public Pinguino? Pareja {get; set;}
         public void Caminar()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{Name} Gorditos y bonitos muchachos estamos caminando {nameof(Pinguino)}");
         }
 
         public void Nadar()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{Name} vamos a nadar xd");
         }
 
         public Pinguino(string name) : base(name)
@@ -21,17 +22,25 @@ namespace Playground.Sesion8.Tipos.Aves
 
         public override void Aparearce()
         {
-            throw new System.NotImplementedException();
+            if (Pareja == null)
+            {
+                Console.WriteLine($"{Name} ya valio xd");
+            }
+            if (Pareja.Genero == Genero)
+            {
+                Console.WriteLine($"{Name} ya la hizo");
+            }
+            Console.WriteLine($"{Name}Es hora del delicioso");
         }
 
         public override void Comer()
         {
-            Console.WriteLine($"{Name} sfksflsflsb {nameof(Pinguino)}");
+            Console.WriteLine($"{Name} esta comiendo un gansito xd");
         }
 
         public override void Dormir()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"{Name} esta dormido zzzzzzzzzzzzzzz");
         }
     }
 }

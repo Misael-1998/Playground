@@ -17,7 +17,9 @@ namespace Playground.Sesion8
             new Leon("Casimiro"),
             new Leon("YaNomiro"),
             new Jirafa("Yakuto"),
-            new Pinguino("baltazar")
+            new Pinguino("baltazar"),
+            new Pato("Lucas")
+
         };
 
         public static void AlimentarAnimales()
