@@ -23,15 +23,11 @@ namespace Playground.sesion3.Extra
             }
             if (vaca.Entrar())
             {
-                int numeroVaca = vaca.ObtenerVaca();
-                Console.WriteLine($"{Name}--muuu{numeroVaca}");
+                Console.WriteLine($"{Name}--muuu{vaca.ObtenerVaca()}");
                 return true;
             }
-            else
-            {
-                Console.WriteLine("Ya no hay mas vacas");
-                return false;
-            }
+            Console.WriteLine("Ya no hay mas vacas");
+            return false;
        }
 
         public void VolverEntrar(Vacas ternero)

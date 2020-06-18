@@ -3,6 +3,7 @@ using Playground.sesion3;
 using Playground.sesion3.Extra;
 using Playground.Sesion7;
 using Playground.Sesion7.Fabrica;
+using Playground.Sesion8;
 
 namespace Playground
 {
@@ -39,8 +40,12 @@ namespace Playground
 
             // Sesion 6
             // new Airport().TakeOffPlane();
+            
             // Sesion7
-            new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
+            // new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
+            
+            // Sesion 8
+            Zoo.AlimentarAnimales();
             
         }
     }
