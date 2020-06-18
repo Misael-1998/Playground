@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics;
-using System.Security.Cryptography.X509Certificates;
 using Playground.Sesion8.Habilidades;
 
 namespace Playground.Sesion8.Tipos.Aves

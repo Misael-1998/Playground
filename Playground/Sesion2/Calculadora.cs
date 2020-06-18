@@ -1,12 +1,12 @@
 ﻿using Playground.Extras;
 using Sesion2.Modelos;
 using System;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace Playground.Sesion2
 {
     class Calculadora
     {
-
         public void Calcular()
         {
             // sumando int
@@ -28,6 +28,7 @@ namespace Playground.Sesion2
             {
                 Console.WriteLine("Error al convertir alguno de los numeros");
             }
+
             if (new Suma().TryAdd("5.02", "15.98", out decimal res2))
             {
                 Console.WriteLine($"Resultado de suma {res2}");
@@ -41,8 +42,17 @@ namespace Playground.Sesion2
             int x = new Suma().Add(5, 2, 7, 9, 3, 1, 5, 3);
             Console.WriteLine($"El resultado es: {x}");
 
-            new CustomConsole().WriteLines("E", "EEE", "EEEE", "Eso fue todo amigos");
+            CustomConsole console = new CustomConsole();
+            console.WriteLines("E", "EEE", "EEEE", "Eso fue todo amigos");
+            Suma xd =  new Suma(0, 1)
+                .Add(1)
+                .Add(2)
+                .Add(5);
+            console.Print(xd.ObtenerValorActual().ToString());
+            Suma[] xd2 = {new Suma(1,1), new Suma(2,2), new Suma(3,3)};
+            xd2[0].Add(5);
+            console.Print(xd2[0].ObtenerValorActual().ToString());
         }
-
+        
     }
 }

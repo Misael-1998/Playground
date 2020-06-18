@@ -14,13 +14,13 @@ namespace Playground
             // Sesion 1
             // new HolaMundo().MostrarHolaMundo();
 
-
             // Sesion 2
-            //new Calculadora().Calcular();
+            new Calculadora().Calcular();
 
             //Sesion 3
             // new ShotGallery().EmptyAmmo();
             //new Establo().EstabloVacio();
+            
             /*
             Layla layla = new Layla();
             layla.CurrentWeapon?.MakeDamage();
@@ -45,7 +45,7 @@ namespace Playground
             // new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
             
             // Sesion 8
-            Zoo.AlimentarAnimales();
+            // Zoo.AlimentarAnimales();
             
         }
     }

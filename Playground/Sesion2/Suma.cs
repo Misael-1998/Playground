@@ -1,11 +1,29 @@
-﻿using System;
-
-
-namespace Sesion2.Modelos
+﻿namespace Playground.Sesion2
 {
-
     class Suma
     {
+        private int _x;
+        private int _y;
+
+        public Suma()
+        {
+        }
+
+        public Suma(int x, int y)
+        {
+            _x = x;
+            _y = y;
+        }
+
+        public Suma Add(int z) => new Suma(_x +_y, z);
+        // {
+        //     _x += _y;
+        //     _y = z;
+        //     return this;
+        // }
+
+        public int ObtenerValorActual() => _x + _y;
+
         public int Add(int x, int y)
         {
             return x + y;
@@ -56,9 +74,8 @@ namespace Sesion2.Modelos
             {
                 acumulado += number[i];
             }
+
             return acumulado;
         }
     }
-
 }
-

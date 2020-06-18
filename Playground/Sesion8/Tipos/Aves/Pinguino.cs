@@ -6,6 +6,7 @@ namespace Playground.Sesion8.Tipos.Aves
     public class Pinguino : Ave, ICaminador, INadador
     {
         public Pinguino? Pareja {get; set;}
+        
         public void Caminar()
         {
             Console.WriteLine($"{Name} Gorditos y bonitos muchachos estamos caminando {nameof(Pinguino)}");
@@ -30,6 +31,7 @@ namespace Playground.Sesion8.Tipos.Aves
             {
                 Console.WriteLine($"{Name} ya la hizo");
             }
+            
             Console.WriteLine($"{Name}Es hora del delicioso");
         }
 
