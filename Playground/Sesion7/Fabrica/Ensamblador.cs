@@ -1,4 +1,5 @@
 ﻿using System;
+using Playground.Sesion7.Fabrica.Frenos;
 using Playground.Sesion7.Fabrica.Llantas;
 using Playground.Sesion7.Fabrica.Motores;
 
@@ -22,7 +23,8 @@ namespace Playground.Sesion7.Fabrica
                     new Maxxis(),
                     new Maxxis(),
                     new Maxxis(),
-                    new Maxxis()
+                    new Maxxis(),
+                    
                 },
                 1 => new ILlanta[]
                 {
@@ -41,6 +43,9 @@ namespace Playground.Sesion7.Fabrica
             };
         }
 
+       
+        
+
         private IMotor HacerMotor(int tipo)
         {
             return tipo switch
@@ -50,6 +55,8 @@ namespace Playground.Sesion7.Fabrica
                 _ => new Motor4Cilindros()
             };
         }
+
+      
 
         public Carro EnsamblarCarro(Modelos modelo)
         {

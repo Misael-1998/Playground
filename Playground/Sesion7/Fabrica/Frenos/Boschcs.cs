@@ -4,11 +4,12 @@ using System.Text;
 
 namespace Playground.Sesion7.Fabrica.Frenos
 {
-    interface IBrembo : IFrenos
+    class Boschcs : IFrenos
     {
-        public void frenar()
+        public void Frenar()
         {
-            Console.WriteLine("frenar xd");
+            Console.WriteLine("Frenar suave xd");
         }
+            
     }
 }

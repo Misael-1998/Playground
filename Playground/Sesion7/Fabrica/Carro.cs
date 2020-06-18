@@ -1,4 +1,5 @@
 ﻿using Playground.Sesion7.Fabrica.Chasis;
+using Playground.Sesion7.Fabrica.Frenos;
 using Playground.Sesion7.Fabrica.Llantas;
 using Playground.Sesion7.Fabrica.Motores;
 
@@ -8,6 +9,7 @@ namespace Playground.Sesion7.Fabrica
     {
         private ILlanta[]? _llantas;
         private IMotor? _motor;
+        private IFrenos[]? _frenar;
 
         public void AgregarLlantas(ILlanta[] llantas)
         {
@@ -18,6 +20,8 @@ namespace Playground.Sesion7.Fabrica
         {
             _motor = motor;
         }
+
+
 
         public void Avanazar()
         {
@@ -30,5 +34,14 @@ namespace Playground.Sesion7.Fabrica
             }
             _motor?.Accelerar();
         }
+
+        public void AgregarFrenos(IFrenos frenar)
+        {
+            _frenar = frenar;
+        }
+       
     }
-}
+
+    
+    }
+
