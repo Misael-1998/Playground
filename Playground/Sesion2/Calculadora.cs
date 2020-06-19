@@ -1,7 +1,5 @@
 ﻿using Playground.Extras;
-using Sesion2.Modelos;
 using System;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Playground.Sesion2
 {
@@ -17,7 +15,6 @@ namespace Playground.Sesion2
 
             // sumando decimal
             Console.WriteLine($"Resultado de suma {new Suma().Add(5.0000001M, 4.9999999M)}");
-
 
             // sumando cadenas
             if (new Suma().TryAdd("0.999", "alv", out decimal res))
@@ -44,18 +41,15 @@ namespace Playground.Sesion2
 
             CustomConsole console = new CustomConsole();
             console.WriteLines("E", "EEE", "EEEE", "Eso fue todo amigos");
-            Suma xd =  new Suma(0, 1)
+            Suma xd = new Suma(0, 1)
                 .Add(1)
                 .Add(2)
                 .Add(5);
             console.Print(xd.ObtenerValorActual().ToString());
-            Suma[] xd2 = { new Suma(1, 1), new Suma(2, 2), new Suma(3, 3) };
-            
-           Suma xd3 =  xd2[0].Add(5);
+            Suma[] xd2 = {new Suma(1, 1), new Suma(2, 2), new Suma(3, 3)};
+            Suma xd3 = xd2[0].Add(5);
             xd2[0] = xd3;
-            
             console.Print(xd2[0].ObtenerValorActual().ToString());
         }
-        
     }
 }

@@ -15,12 +15,12 @@
             _y = y;
         }
 
-        public Suma Add(int z) => new Suma(_x +_y, z);
-        // {
-        //     _x += _y;
-        //     _y = z;
-        //     return this;
-        // }
+        public Suma Add(int z)
+        {
+            _x += _y;
+            _y = z;
+            return this;
+        }
 
         public int ObtenerValorActual() => _x + _y;
 
