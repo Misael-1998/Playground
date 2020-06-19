@@ -5,8 +5,11 @@ using Playground.Sesion2;
 
 namespace Sesion2.Modelos
 {
-    class multiplicacion:Suma
+    class Multiplicacion
     {
+        //Campos privados
+        private int _x;
+        private int _y;
         public int add(int x, int y)
         {
             return x * y;
@@ -15,6 +18,23 @@ namespace Sesion2.Modelos
         public decimal add(decimal x, decimal y)
         {
             return x * y;
+        }
+
+        public Multiplicacion(int x, int y)
+        {
+            _x = x;
+            _y = y;
+        }
+
+        public int ObtenerValorActual() => _x * _y;
+
+        public static int MultiplicacionXd(Multiplicacion multiA, int multiB)
+        {
+            int multi1 = multiA.ObtenerValorActual();
+            int multi2 = multiB;
+            Multiplicacion Multiplicacion = new Multiplicacion(multi1,multi2);
+            return Multiplicacion.ObtenerValorActual();
+
         }
 
         public void operacion(int tipoDato)
