@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Playground.Sesion2;
 
-namespace Sesion2.Modelos
+namespace Playground.Sesion2
 {
     class Resta
     {

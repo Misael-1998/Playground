@@ -65,17 +65,6 @@
             }
         }
 
-
-        public int Add(int[] numbers)
-        {
-            int acumulado = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                acumulado += numbers[i];
-            }
-            return acumulado;
-        }
-
         public int Add(params int[] number)
         {
             int acumulado = 0;

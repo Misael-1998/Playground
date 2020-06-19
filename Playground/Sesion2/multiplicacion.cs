@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Playground.Sesion2;
 
-namespace Sesion2.Modelos
+namespace Playground.Sesion2
 {
     class Multiplicacion
     {
         //Campos privados
         private int _x;
         private int _y;
+
         public int add(int x, int y)
         {
             return x * y;
@@ -31,8 +29,7 @@ namespace Sesion2.Modelos
         public static int MultiplicacionXd(Multiplicacion multiA, int multiB)
         {
             int multi1 = multiA.ObtenerValorActual();
-            int multi2 = multiB;
-            Multiplicacion Multiplicacion = new Multiplicacion(multi1,multi2);
+            Multiplicacion Multiplicacion = new Multiplicacion(multi1,multiB);
             return Multiplicacion.ObtenerValorActual();
 
         }

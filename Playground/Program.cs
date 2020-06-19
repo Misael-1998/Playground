@@ -1,4 +1,5 @@
-﻿using Playground.Sesion2;
+﻿using Playground.Extras;
+using Playground.Sesion2;
 using Playground.sesion3;
 using Playground.sesion3.Extra;
 using Playground.Sesion7;
@@ -20,7 +21,7 @@ namespace Playground
             //Sesion 3
             // new ShotGallery().EmptyAmmo();
             //new Establo().EstabloVacio();
-            
+
             /*
             Layla layla = new Layla();
             layla.CurrentWeapon?.MakeDamage();
@@ -40,13 +41,15 @@ namespace Playground
 
             // Sesion 6
             // new Airport().TakeOffPlane();
-            
+
             // Sesion7
             // new Ensamblador().EnsamblarCarro(Modelos.Lanser).Avanazar();
-            
+
             // Sesion 8
             // Zoo.AlimentarAnimales();
-            
+
+            // Extrax
+            new Licuadora().Ejecutar();
         }
     }
 }
