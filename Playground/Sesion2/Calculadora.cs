@@ -49,8 +49,11 @@ namespace Playground.Sesion2
                 .Add(2)
                 .Add(5);
             console.Print(xd.ObtenerValorActual().ToString());
-            Suma[] xd2 = {new Suma(1,1), new Suma(2,2), new Suma(3,3)};
-            xd2[0].Add(5);
+            Suma[] xd2 = { new Suma(1, 1), new Suma(2, 2), new Suma(3, 3) };
+            
+           Suma xd3 =  xd2[0].Add(5);
+            xd2[0] = xd3;
+            
             console.Print(xd2[0].ObtenerValorActual().ToString());
         }
         
