@@ -44,18 +44,28 @@ namespace Playground.Sesion2
 
             CustomConsole console = new CustomConsole();
             console.WriteLines("E", "EEE", "EEEE", "Eso fue todo amigos");
-            Suma xd =  new Suma(0, 1)
+            Suma xd = new Suma(0, 1)
                 .Add(1)
                 .Add(2)
                 .Add(5);
             console.Print(xd.ObtenerValorActual().ToString());
             Suma[] xd2 = { new Suma(1, 1), new Suma(2, 2), new Suma(3, 3) };
-            
-           Suma xd3 =  xd2[0].Add(5);
+
+            Suma xd3 = xd2[0].Add(5);
             xd2[0] = xd3;
-            
+
+
             console.Print(xd2[0].ObtenerValorActual().ToString());
+
+            Suma sumaTotal = new Suma().Add(sumaB: xd, sumaA: new Suma(8, 9));
+            Console.WriteLine(sumaTotal.ObtenerValorActual());
+
+            Resta restaTotal = Resta.Restaxd(new Resta(9, 15), new Resta(2, 5));
+            console.WriteLines(restaTotal.ObtenerValorActual().ToString());
+
+            int multiTotal = Multiplicacion.MultiplicacionXd(new Multiplicacion(2, 3), 5);
+            console.WriteLines(multiTotal.ToString());
         }
-        
+
     }
 }

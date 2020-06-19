@@ -4,10 +4,13 @@
     {
         private int _x;
         private int _y;
+        
 
         public Suma()
         {
         }
+
+        
 
         public Suma(int x, int y)
         {
@@ -15,6 +18,7 @@
             _y = y;
         }
 
+        
         public Suma Add(int z) => new Suma(_x +_y, z);
         // {
         //     _x += _y;
@@ -28,7 +32,13 @@
         {
             return x + y;
         }
-
+        public Suma Add(Suma sumaA, Suma sumaB)
+        {
+            int suma1 =  sumaA.ObtenerValorActual();
+            int suma2 = sumaB.ObtenerValorActual();
+            Suma suma = new Suma(suma1,suma2);
+            return suma;
+        }
         public decimal Add(decimal x, decimal y)
         {
             return x + y;
@@ -55,6 +65,8 @@
                 return false;
             }
         }
+
+
 
         /*
         public int Add(int[] numbers) {
