@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Playground": {
+      "commandName": "Project",
+      "commandLineArgs": "2 10 asdf"
+    }
+  }
+}

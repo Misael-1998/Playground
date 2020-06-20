@@ -6,35 +6,50 @@ namespace Playground.Extras
     {
         public string Name { get; set; } = "Menu";
         private string[] Options { get; } = { "salir" };
+        
         public int NumberOfOptions
         {
             get => Options.Length;
         }
 
-        public Menu(int optionsNumber)
+        public Menu(int numeroOpciones)
         {
-            if (optionsNumber < 1) return;
-            Options = new string[optionsNumber];
+            if (numeroOpciones < 1) return;
+            Options = new string[numeroOpciones];
         }
 
         public bool TryAddOption(string optionName, int posicition)
         {
             if (posicition < 0 || posicition >= Options.Length) return false;
-            Options[posicition] = optionName;
+            Options[posicition] = $"{posicition + 1}-{optionName}";
             return true;
         }
 
-        public void ShowMenu()
+        protected virtual void ShowMenu()
         {
             Console.WriteLine(Name);
-            for (int i = 0; i < Options.Length; i++)
+            foreach (string option in Options)
             {
-                Console.WriteLine(Options[i]);
+                Console.WriteLine(option);
             }
-
         }
 
-
+        public int? CaptureOption()
+        {
+            ShowMenu();
+            string option;
+            int optionNumber;
+            Console.WriteLine("Ingrese una opcion valida");
+            option = Console.ReadLine();
+            if (int.TryParse(option, out optionNumber))
+            {
+                return optionNumber - 1;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
     }
 }
