@@ -9,6 +9,10 @@ namespace Playground.sesion3.Extra
     {
         private int vaca;
 
+        public Vacas()
+        {
+        }
+
         public Vacas(int ganado)
         {
             vaca = ganado;
