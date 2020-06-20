@@ -1,7 +1,6 @@
 ﻿using Playground.Extras;
 using Playground.Sesion2;
 using Playground.sesion3;
-using Playground.sesion3.Extra;
 using Playground.Sesion7;
 using Playground.Sesion7.Fabrica;
 using Playground.Sesion8;

@@ -1,8 +1,6 @@
 ﻿using Playground.Sesion2;
-using Playground.sesion3.Extra;
 using Playground.Sesion8.Tipos.Aves;
 using Playground.Session5.Guns;
-using System;
 
 namespace Playground.Extras
 {
@@ -16,7 +14,6 @@ namespace Playground.Extras
             float numero = resta.ObtenerValorActual();
             return new Arco();
         }
-
 
         public void Ejecutar()
         {

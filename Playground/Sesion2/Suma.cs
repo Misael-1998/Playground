@@ -10,13 +10,14 @@
         {
         }
 
-        
 
         public Suma(int x, int y)
         {
             _x = x;
             _y = y;
         }
+        
+        public int ObtenerValorActual() => _x + _y;
 
         public Suma Add(int z)
         {
@@ -24,8 +25,6 @@
             _y = z;
             return this;
         }
-
-        public int ObtenerValorActual() => _x + _y;
 
         public int Add(int x, int y)
         {
