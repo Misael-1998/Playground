@@ -2,7 +2,7 @@
 
 namespace Playground.Sesion2
 {
-    class Multiplicacion
+    class multiplicacion
     {
         //Campos privados
         private int _x;
@@ -18,7 +18,7 @@ namespace Playground.Sesion2
             return x * y;
         }
 
-        public Multiplicacion(int x, int y)
+        public multiplicacion(int x, int y)
         {
             _x = x;
             _y = y;
@@ -26,10 +26,10 @@ namespace Playground.Sesion2
 
         public int ObtenerValorActual() => _x * _y;
 
-        public static int MultiplicacionXd(Multiplicacion multiA, int multiB)
+        public static int MultiplicacionXd(multiplicacion multiA, int multiB)
         {
             int multi1 = multiA.ObtenerValorActual();
-            Multiplicacion Multiplicacion = new Multiplicacion(multi1,multiB);
+            multiplicacion Multiplicacion = new multiplicacion(multi1,multiB);
             return Multiplicacion.ObtenerValorActual();
 
         }

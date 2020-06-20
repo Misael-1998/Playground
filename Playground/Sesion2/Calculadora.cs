@@ -59,7 +59,7 @@ namespace Playground.Sesion2
             Resta restaTotal = Resta.Restaxd(new Resta(9, 15), new Resta(2, 5));
             console.WriteLines(restaTotal.ObtenerValorActual().ToString());
 
-            int multiTotal = Multiplicacion.MultiplicacionXd(new Multiplicacion(2, 3), 5);
+            int multiTotal = multiplicacion.MultiplicacionXd(new multiplicacion(2, 3), 5);
             console.WriteLines(multiTotal.ToString());
         }
     }
