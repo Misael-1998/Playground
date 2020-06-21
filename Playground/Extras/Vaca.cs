@@ -33,7 +33,7 @@ namespace Playground.Extras
         private readonly int _id;
 
         /// <summary>
-        /// Este numero es una identificacion unica ára la vaca asignada
+        /// Este numero es una identificacion unica pára la vaca asignada
         /// al nacer y no debe ser cambiada.
         /// </summary>
         public int Id => _id;
@@ -62,6 +62,5 @@ namespace Playground.Extras
         {
             _id = id;
         }
-
     }
 }

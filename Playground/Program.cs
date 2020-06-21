@@ -46,6 +46,12 @@ namespace Playground
                     // Sesion 3
                     new ShotGallery().EmptyAmmo();
                     break;
+                case 4:
+                    //Sesion4
+                    break;
+                case 5:
+                    // Sesion5
+                    break;
             }
 
 

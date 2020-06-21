@@ -13,12 +13,25 @@ namespace Playground.Extras
         
         public Vaca? BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            int[] lista = {1,2,3,4,5};
+            Boolean respuesta = false;
+            Console.WriteLine("Ingrese un id");
+            id = int.Parse(Console.ReadLine());
+
+            while (!(respuesta)&& id < 5)
+            {
+                if (id == lista[id] )
+                {
+                    respuesta = true;
+                }
+            }
+           
+            
         }
         
         public bool VacaExiste(Vaca vaca)
         {
-            throw new NotImplementedException();
+           throw new NotImplementedException();
         }
 
         public Vaca[] ObtenerLecheras()
