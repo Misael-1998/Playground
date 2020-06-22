@@ -5,64 +5,65 @@ namespace Playground.Extras
     public class Establo
     {
         private Vaca[] _vacas;
-        
+
         public Establo(Vaca[] vacas)
         {
             _vacas = vacas;
         }
-        
+
         public Vaca? BuscarPorId(int id)
         {
-            foreach ( Vaca vaca in _vacas)
+            foreach (Vaca vaca in _vacas)
             {
-                if (vaca.Id == id )
+                if (vaca.Id == id)
                 {
                     return vaca;
                 }
-
             }
+
             // null representan nada 
             return null;
         }
-        
+
         public bool VacaExiste(Vaca vaca)
         {
-
-            for (int i = 0; i < _vacas.Length; i++)
+            foreach (var t in _vacas)
             {
-                if (vaca.Name == _vacas[i].Name  && vaca.Id == _vacas[i].Id)
+                if (vaca.Name == t.Name && vaca.Id == t.Id)
                 {
                     return true;
                 }
-                
             }
+
             return false;
         }
 
         public Vaca[] ObtenerLecheras()
         {
             int lechera = 0;
-            for (int i = 0; i < _vacas.Length ; i++)
+            for (int i = 0; i < _vacas.Length; i++)
             {
                 if (_vacas[i].TipoDeVaca == Tipo.LECHERA)
                 {
                     lechera++;
-                    
                 }
+            }
 
-            }
             Vaca[] vs = new Vaca[lechera];
-            for (int i = 0; i < vs.Length; i++)
+            int index = 0;
+            for (int i = 0; i < _vacas.Length; i++)
             {
-                if (_vacas[i].TipoDeVaca == Tipo.LECHERA )
+                if (_vacas[i].TipoDeVaca == Tipo.LECHERA)
                 {
-                    vs[i] = _vacas[i];
+                    vs[index] = _vacas[i];
+                    index++;
                 }
             }
-            return _vacas;
+
+            return vs;
         }
-        
-        public Vaca[] ObtenerPorTazaDeProduccion()
+
+        public Vaca[] OrdenarPorTazaDeProduccion()
         {
             throw new NotImplementedException();
         }
@@ -71,21 +72,35 @@ namespace Playground.Extras
         {
             throw new NotImplementedException();
         }
-        
-        public Vaca ObtenerLaMasLechera()
+
+        public Vaca? ObtenerLaMasLechera()
         {
-            throw new NotImplementedException();
+            if (_vacas.Length < 1)
+            {
+                return null;
+            }
+            
+            Vaca maximo = _vacas[0];
+            
+            foreach (var t in _vacas)
+            {
+                if (t.TazaDeProccion > maximo.TazaDeProccion)
+                {
+                    maximo = t;
+                }
+            }
+
+            return maximo;
         }
-        
+
         public Vaca ObtenerLaMenosLechera()
         {
             throw new NotImplementedException();
         }
-        
+
         public Vaca[] ObtenerVacasRepetidas()
         {
             throw new NotImplementedException();
         }
-
     }
 }

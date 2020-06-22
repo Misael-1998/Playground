@@ -76,7 +76,7 @@ namespace PlaygroundTest.ExtrasTest
         [Fact]
         public void Deberian_Estar_Ordenadas_Por_taza_De_Produccion()
         {
-            Vaca[] vacas = new Establo(_vacas).ObtenerPorTazaDeProduccion();
+            Vaca[] vacas = new Establo(_vacas).OrdenarPorTazaDeProduccion();
             if (_vacas.Length != vacas.Length)
             {
                 _console.WriteLine($"Habian {_vacas.Length} y ordenaste {vacas.Length}");
