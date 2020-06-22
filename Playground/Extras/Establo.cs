@@ -13,30 +13,53 @@ namespace Playground.Extras
         
         public Vaca? BuscarPorId(int id)
         {
-            int[] lista = {1,2,3,4,5};
-            Boolean respuesta = false;
-            Console.WriteLine("Ingrese un id");
-            id = int.Parse(Console.ReadLine());
-
-            while (!(respuesta)&& id < 5)
+            foreach ( Vaca vaca in _vacas)
             {
-                if (id == lista[id] )
+                if (vaca.Id == id )
                 {
-                    respuesta = true;
+                    return vaca;
                 }
+
             }
-           
-            
+            // null representan nada 
+            return null;
         }
         
         public bool VacaExiste(Vaca vaca)
         {
-           throw new NotImplementedException();
+
+            for (int i = 0; i < _vacas.Length; i++)
+            {
+                if (vaca.Name == _vacas[i].Name  && vaca.Id == _vacas[i].Id)
+                {
+                    return true;
+                }
+                
+            }
+            return false;
         }
 
         public Vaca[] ObtenerLecheras()
         {
-            throw new NotImplementedException();   
+            int lechera = 0;
+            for (int i = 0; i < _vacas.Length ; i++)
+            {
+                if (_vacas[i].TipoDeVaca == Tipo.LECHERA)
+                {
+                    lechera++;
+                    
+                }
+
+            }
+            Vaca[] vs = new Vaca[lechera];
+            for (int i = 0; i < vs.Length; i++)
+            {
+                if (_vacas[i].TipoDeVaca == Tipo.LECHERA )
+                {
+                    vs[i] = _vacas[i];
+                }
+            }
+            return _vacas;
         }
         
         public Vaca[] ObtenerPorTazaDeProduccion()
