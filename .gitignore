@@ -5,12 +5,12 @@
 
 # User-specific files
 *.rsuser
-*.suo
+suo
 *.user
 *.userosscache
 *.sln.docstates
 .vs/
-*.suo
+suo
 # Mis archivos
 BancoShell/Doc
 .idea
