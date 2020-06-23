@@ -93,9 +93,21 @@ namespace Playground.Extras
             return maximo;
         }
 
-        public Vaca ObtenerLaMenosLechera()
+        public Vaca? ObtenerLaMenosLechera()
         {
-            throw new NotImplementedException();
+            if (_vacas.Length <1)
+            {
+                return null;
+            }
+            Vaca minimo = _vacas[0];
+            for (int i = 0; i <_vacas.Length; i++)
+            {
+                if (_vacas[i].TazaDeProccion < minimo.TazaDeProccion )
+                {
+                    minimo = _vacas[i];
+                }
+            }
+            return minimo;
         }
 
         public Vaca[] ObtenerVacasRepetidas()
